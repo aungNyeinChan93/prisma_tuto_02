@@ -1,0 +1,1 @@
+"import fs from 'fs';\r\nimport path from 'path';\r\n\r\nexport function readFileWithCallback(filePath: string, cb: (err: NodeJS.ErrnoException | null, data?: string) => void) {\r\n  const absolutePath = path.resolve(filePath);\r\n  fs.readFile(absolutePath, 'utf-8', cb);\r\n}\r\n"

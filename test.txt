@@ -1,0 +1,7 @@
+import fs from 'fs';
+import path from 'path';
+
+export function readFileWithCallback(filePath: string, cb: (err: NodeJS.ErrnoException | null, data?: string) => void) {
+  const absolutePath = path.resolve(filePath);
+  fs.readFile(absolutePath, 'utf-8', cb);
+}

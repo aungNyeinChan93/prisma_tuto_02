@@ -1,3 +1,5 @@
+import TestReadFile from "@/components/server/TestReadFile";
+import TestRouter from "@/components/server/TestRouter";
 import Link from "next/link";
 import React from "react";
 
@@ -23,6 +25,11 @@ const Home = async () => {
           >
             Dashboard
           </Link>
+          <TestRouter to="/dashboard" />
+          <TestRouter to="/dashboard/test" />
+          <TestRouter to="/dashboard/other" />
+
+          <TestReadFile />
         </div>
       </main>
     </React.Fragment>
