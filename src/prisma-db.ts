@@ -39,6 +39,42 @@ export async function createUser() {
 
 export async function getUsers() {
     const users = await prisma.user.findMany({
+        where: {
+            AND: [
+                { name: { in: ['chan', 'susu', 'aung'] } },
+                {
+                    posts: {
+                        some: {
+                            categories: {
+                                some: {
+                                    name: {
+                                        equals: "test category"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    posts: {
+                        every: {
+                            comments: {
+                                some: {
+                                    body: { contains: 'com' }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    nickname: {
+                        is: {
+                            name: "changyi"
+                        }
+                    }
+                }
+            ]
+        },
         include: {
             posts: {
                 include: {

@@ -20,6 +20,8 @@ model User {
   email    String    @unique
   posts    Post[]
   nickname Nickname?
+
+  @@index([email])
 }
 
 model Post {
@@ -29,6 +31,8 @@ model Post {
   userId     Int
   comments   Comment[]
   categories Category[]
+
+  @@index([title])
 }
 
 model Nickname {
