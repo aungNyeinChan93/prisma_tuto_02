@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { urlToName } from "@/helpers/client-helper";
 
-const TestRouter = ({ to = "#" }: { to: string }) => {
+const TestRouter = ({ to = "#" }: { to?: string }) => {
   const router = useRouter();
   return (
     <React.Fragment>

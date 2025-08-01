@@ -26,7 +26,7 @@ const Home = async () => {
             Dashboard
           </Link>
           <TestRouter to="/dashboard" />
-          <TestRouter to="/dashboard/test" />
+          <TestRouter to="/dashboard/tasks" />
           <TestRouter to="/dashboard/other" />
 
           <TestReadFile />
