@@ -14,6 +14,8 @@ const DetailTask: React.FC<DetailTaskProps> = async ({
   searchParams,
 }) => {
   console.log({ params: await params, searchParams: await searchParams });
+  const query = await searchParams;
+  console.log({ query });
 
   return (
     <React.Fragment>
