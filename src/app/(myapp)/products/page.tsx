@@ -32,7 +32,7 @@ const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
 
   return (
     <React.Fragment>
-      <main className="grid grid-cols-1 sm:grid-cols-4 gap-6 my-7 px-10 mx-10">
+      <main className="grid grid-cols-1 sm:grid-cols-3 gap-6 my-7 px-10 mx-10">
         {products &&
           Array.isArray(products) &&
           products?.map((product) => (
