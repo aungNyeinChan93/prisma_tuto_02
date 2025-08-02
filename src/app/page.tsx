@@ -2,6 +2,19 @@ import TestReadFile from "@/components/server/TestReadFile";
 import TestRouter from "@/components/server/TestRouter";
 import Link from "next/link";
 import React from "react";
+import { Bebas_Neue, ABeeZee } from "next/font/google";
+
+const bebasNenuFont = Bebas_Neue({
+  weight: "400",
+  display: "auto",
+  subsets: ["latin"],
+  style: "normal",
+});
+
+const abeezeeFont = ABeeZee({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const Home = async () => {
   return (
@@ -11,9 +24,10 @@ const Home = async () => {
           <div className="text-4xl text-indigo-500 font-bold font-mono ">
             Welcome
           </div>
+          <p className={`${abeezeeFont.className} text-5xl`}>Hello World</p>
         </div>
         <div className="text-center">
-          <p className="text-base">
+          <p className={`text-2xl ${bebasNenuFont.className}`}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
             reiciendis necessitatibus fugit?
           </p>

@@ -6,7 +6,6 @@ const AppLayout = async ({ children }: { children: ReactNode }) => {
     <React.Fragment>
       <main>
         <Navbar />
-
         {children}
       </main>
     </React.Fragment>
